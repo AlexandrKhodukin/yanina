@@ -1,1 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Янина Константиновна Демидчик — Учитель и гордость школы</title>
+  <meta name="description" content="Патриотический одностраничный сайт о женщине-учителе Янине Константиновне Демидчик. В её честь названа школа (уточнить точные сведения перед публикацией)." />
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --red: #d22730;
+      --green: #0f8040;
+      --white:#ffffff;
+      --bg: #f6f7fb;
+      --text:#1e262f;
+      --muted:#5e6b79;
+      --card:#ffffff;
+      --shadow: 0 12px 28px rgba(0,0,0,.08);
+      --radius: 16px;
+      --radius-lg: 22px;
+      --maxw: 1160px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--text);
+      background: radial-gradient(1400px 700px at 20% -10%, rgba(210,39,48,.07), transparent 60%),
+                  radial-gradient(1200px 600px at 120% 10%, rgba(15,128,64,.07), transparent 60%),
+                  var(--bg);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height:1.65;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    .flag-ornament{
+      height: 14px;
+      background:
+        repeating-linear-gradient(90deg, var(--red) 0 14px, var(--white) 14px 16px);
+      box-shadow: var(--shadow);
+    }
+    header{
+      background: linear-gradient(135deg, color-mix(in oklab, var(--red) 60%, #b31f28) , color-mix(in oklab, var(--green) 70%, #0a5f30));
+      color:var(--white);
+      position:relative;
+      overflow:hidden;
+      isolation:isolate;
+    }
+    header::after{
+      content:"";
+      position:absolute; inset:-20% -10% auto -10%;
+      height:140%; transform:skewY(-6deg);
+      background: radial-gradient(800px 400px at 20% 20%, rgba(255,255,255,.15), transparent 70%),
+                  radial-gradient(800px 400px at 80% 10%, rgba(255,255,255,.12), transparent 70%);
+      opacity:.7;
+      pointer-events:none;
+      z-index:0;
+    }
+    .container{max-width:var(--maxw); margin:0 auto; padding:56px 20px 70px; position:relative; z-index:1;}
+    .hero{
+      display:grid; gap:32px; align-items:center;
+      grid-template-columns: 1.2fr 1fr;
+    }
+    @media (max-width: 880px){ .hero{grid-template-columns: 1fr} }
+    .badge{
+      display:inline-block;
+      padding:6px 10px;
+      background:rgba(255,255,255,.16);
+      border:1px solid rgba(255,255,255,.4);
+      border-radius:999px;
+      font-size:12px; letter-spacing:.35px;
+      backdrop-filter: blur(4px);
+    }
+    h1.title{
+      font-family:"Merriweather", Georgia, serif;
+      font-weight:900;
+      margin:12px 0 10px;
+      line-height:1.1;
+      font-size: clamp(30px, 5vw, 56px);
+      text-wrap: balance;
+    }
+    .subtitle{
+      margin:0 0 14px;
+      font-size: clamp(16px, 2.2vw, 20px);
+      opacity:.95;
+    }
+    .hero-meta{font-size:14px; opacity:.95}
+    .hero-card{
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.45);
+      border-radius: var(--radius-lg);
+      padding: 18px;
+      backdrop-filter: blur(5px);
+    }
+    .portrait{width:100%; border-radius:16px; box-shadow: var(--shadow); display:block}
+    .portrait-figure{margin:0}
+    .actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+    .btn{
+      display:inline-block; padding:11px 16px; border-radius:12px;
+      background:var(--green); color:#fff; text-decoration:none;
+      border:1px solid rgba(0,0,0,.08); box-shadow: var(--shadow);
+      font-weight:600; transition: transform .08s ease, filter .15s ease;
+    }
+    .btn:hover{ filter: brightness(1.05); transform: translateY(-1px); }
+    .btn.alt{ background:var(--red); }
+    main{ max-width:var(--maxw); margin:0 auto; padding:30px 20px 80px; }
+    .grid{ display:grid; grid-template-columns: repeat(12, 1fr); gap:20px; }
+    .card{ grid-column: span 12; background:var(--card); border-radius:var(--radius-lg); box-shadow: var(--shadow); padding:24px; }
+    @media (min-width: 900px){ .half{ grid-column: span 6 } .third{ grid-column: span 4 } }
+    h2{ font-family:"Merriweather", Georgia, serif; font-weight:900; margin:0 0 12px; font-size: clamp(22px, 3.2vw, 32px); text-wrap: balance; }
+    h3{ font-weight:700; margin:12px 0 6px; font-size: 18px; }
+    p{ margin:10px 0; }
+    .muted{ color:var(--muted); font-size:14px; }
+    .list{ padding-left: 18px; }
+    .list li{ margin:6px 0 }
+    .quote{
+      border-left: 4px solid var(--green);
+      padding-left: 12px;
+      font-style: italic;
+      font-family: "Merriweather", Georgia, serif;
+      background: linear-gradient(90deg, rgba(15,128,64,.06), transparent 60%);
+      border-radius: 6px;
+    }
+    .timeline{ position:relative; padding-left: 26px; }
+    .timeline::before{
+      content:""; position:absolute; left:10px; top:0; bottom:0; width:2px;
+      background: linear-gradient(var(--red), var(--green)); border-radius: 2px;
+    }
+    .event{ position:relative; margin:14px 0 16px; }
+    .event::before{
+      content:""; position:absolute; left:-1px; top:.5em; width:10px; height:10px;
+      background:var(--red); border:2px solid var(--white); border-radius:50%; box-shadow: 0 0 0 2px var(--red) inset;
+    }
+    .banner{
+      background: linear-gradient(90deg, var(--red) 0%, var(--red) 50%, var(--green) 50%, var(--green) 100%);
+      color:#fff; border-radius: var(--radius-lg); display:grid; grid-template-columns: 1fr auto; gap:10px; padding:18px; align-items:center;
+      box-shadow: var(--shadow);
+    }
+    .gallery{ display:grid; grid-template-columns: repeat(2, 1fr); gap:10px; }
+    @media (min-width: 900px){ .gallery{ grid-template-columns: repeat(4, 1fr); } }
+    .ph{ aspect-ratio: 4/3; border-radius: 14px; background: linear-gradient(135deg, #e9edf2, #dfe5eb); display:grid; place-items:center; color:#6a7683; font-size:14px; border:1px dashed #c6cdd6; }
+    .kicker{ font-size:12px; letter-spacing:.4px; text-transform:uppercase; color:var(--muted); }
+    .foot{
+      margin-top: 40px; padding: 28px 20px 44px; color: var(--muted); text-align:center;
+    }
+    .sig{ font-weight:600; color: #2a3644 }
+    a.inline{ color: var(--green); text-decoration: underline; text-decoration-thickness:2px; text-underline-offset:2px }
+    @media print{
+      header{ color:#000; background:#fff; border-bottom: 3px solid var(--red); }
+      .flag-ornament{ display:none }
+      .btn, .actions{ display:none }
+      body{ background:#fff }
+      .card, .banner{ box-shadow:none; border:1px solid #e5e7eb; }
+    }
+  </style>
+  <style>
+    /* NAVBAR */
+    .nav{
+      position: sticky; top:0; z-index:50; background:#ffffffcc; backdrop-filter: saturate(180%) blur(8px);
+      border-bottom:1px solid #e8ecf1;
+    }
+    .nav .nav-inner{max-width:var(--maxw); margin:0 auto; padding:12px 20px; display:flex; align-items:center; gap:18px}
+    .brand{display:flex; align-items:center; gap:10px; font-family:"Merriweather", Georgia, serif; font-weight:900; color:#2a3644; text-decoration:none}
+    .brand-mark{width:28px; height:28px; border-radius:50%; background: radial-gradient(circle at 35% 35%, var(--green), #0a5f30 60%); box-shadow: inset 0 0 0 4px #e6efe9}
+    .nav ul{list-style:none; display:flex; gap:16px; margin:0 0 0 auto; padding:0}
+    .nav a{color:#2a3644; text-decoration:none; font-weight:600; padding:8px 10px; border-radius:10px}
+    .nav a:hover{background:#f1f4f8}
+    .nav .cta{margin-left:10px; background:#8d6a44; color:#fff}
+
+    /* HERO like Mandela */
+    header.hero-hero{
+      background:#f9f7f2; color:#1f2937; padding: 64px 0 48px; position:relative; overflow:hidden;
+    }
+    .hero-wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px; display:grid; grid-template-columns: 1.1fr .9fr; gap:24px; align-items:center}
+    @media (max-width: 980px){ .hero-wrap{grid-template-columns:1fr} }
+    .h-title{font-family:"Merriweather", Georgia, serif; font-weight:900; letter-spacing:-.01em; line-height:1.05; font-size: clamp(34px, 6vw, 64px); margin:0 0 10px}
+    .h-sub{max-width: 60ch; font-size: clamp(16px, 2vw, 20px); color:#3b4a5a}
+    .hero-actions{display:flex; gap:12px; margin-top:22px; flex-wrap:wrap}
+    .btn.neutral{background:#2a3644}
+    .hero-figure{position:relative}
+    .hero-photo{
+      width:100%; max-width:560px; margin:0 auto; display:block; border-radius:24px; box-shadow: 0 20px 60px rgba(0,0,0,.18);
+      filter: sepia(10%) contrast(105%);
+    }
+    .hero-ornament{position:absolute; right:-80px; top:-40px; width:520px; height:520px; border-radius:50%;
+      background: radial-gradient(circle, rgba(141,106,68,.35) 0 40%, transparent 41% 100%),
+                  repeating-conic-gradient(from 0deg, rgba(141,106,68,.25) 0 12deg, transparent 12deg 24deg);
+      mix-blend-mode:multiply; pointer-events:none; filter: blur(1px);
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Главная навигация">
+    <div class="nav-inner">
+      <a href="#top" class="brand"><span class="brand-mark" aria-hidden="true"></span><span>Янина Константиновна Демидчик</span></a>
+      <ul>
+        <li><a href="#biography">Биография</a></li>
+        <li><a href="#school">Школа</a></li>
+        <li><a href="#milestones">Вехи</a></li>
+        <li><a href="#gallery">Галерея</a></li>
+        <li><a href="#contacts" class="cta">Контакты</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="flag-ornament" aria-hidden="true"></div>
+
+  <header class="hero-hero" id="top">
+    <div class="hero-wrap">
+      <div>
+        <span class="badge">Патриотический проект</span>
+        <h1 class="h-title">Янина Константиновна Демидчик</h1>
+        <p class="h-sub">Учитель, посвятивший свою жизнь детям и Родине. В её честь названа школа. Наследие педагога — это знания, доброта и ответственность за будущее.</p>
+      </div>
+      <div class="hero-figure">
+        <span class="hero-ornament" aria-hidden="true"></span>
+        <img class="hero-photo" src="Skuratovich_Yanina_Konstantinovna.jpg" alt="Янина Константиновна Демидчик — портрет" loading="eager" />
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="biography" class="grid" aria-label="Биография и заслуги">
+      <article class="card half">
+        <div class="kicker">О человеке</div>
+        <h2>Педагог, которому доверяют</h2>
+        <p>Янина Константиновна Демидчик — вдохновляющий пример учителя, для которого школа стала вторым домом, а ученики — большой семьёй. Много лет работы в образовании стали её служением людям и своей стране.</p>
+        <p>Она уделяла особое внимание воспитанию гражданственности, уважения к истории и культуре Беларуси, развивала у ребят стремление к знаниям и добрым делам.</p>
+        <div class="quote">«Учитель — это человек, который зажигает в сердцах детей огонь познания и ответственности за будущее».</div>
+      </article>
+      <aside class="card half">
+        <div class="kicker">Ценности</div>
+        <h2>Что она прививала ученикам</h2>
+        <ul class="list">
+          <li>Любовь к детям и профессии.</li>
+          <li>Патриотизм и уважение к культурным традициям.</li>
+          <li>Трудолюбие, честность и ответственность.</li>
+          <li>Поддержка инициатив и талантов учеников.</li>
+        </ul>
+        <h3>Педагогическое наследие</h3>
+        <ul class="list">
+          <li>Классные и школьные проекты по истории и культуре Беларуси.</li>
+          <li>Волонтёрские и общественно полезные инициативы.</li>
+          <li>Наставничество молодых педагогов.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="school" class="grid" aria-label="Школа, названная в честь Я.К. Демидчик">
+      <div class="card">
+        <div class="kicker">Имя школы</div>
+        <h2>Школа, названная в её честь</h2>
+        <div class="banner">
+          <div>
+            <strong>Государственное учреждение образования "Воротовская средняя школа имени Я.К.Демидчик"</strong>
+          </div>
+          <div><a class="btn" href="#traditions">Традиции школы</a></div>
+        </div>
+        <p style="margin-top:14px">Присвоение имени школе — знак общественного признания вклада учителя в развитие образования и воспитание подрастающего поколения. Имя Я.К. Демидчик стало для учеников примером честного служения профессии и Родине.</p>
+      </div>
+    </section>
+
+    <section id="milestones" class="grid" aria-label="Основные вехи">
+      <div class="card half">
+        <div class="kicker">Вехи</div>
+        <h2>Достижения и служение</h2>
+        <div class="timeline">
+          <div class="event">
+            <h3>Работа в школе</h3>
+            <p class="muted">Годы службы в образовании (уточняются).</p>
+          </div>
+          <div class="event">
+            <h3>Методические разработки</h3>
+            <p>Создание классных часов и патриотических программ, поддержка ученических проектов.</p>
+          </div>
+          <div class="event">
+            <h3>Общественное признание</h3>
+            <p>Присвоение имени школе в знак уважения и благодарности.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card half" id="traditions">
+        <div class="kicker">Школьная жизнь</div>
+        <h2>Традиции школы</h2>
+        <ul class="list">
+          <li><strong>Дни памяти и славы</strong> — уроки мужества, встречи с ветеранами и известными выпускниками.</li>
+          <li><strong>Неделя культуры</strong> — знакомство с народным искусством, ремёслами, литературой и музыкой Беларуси.</li>
+          <li><strong>Волонтёрские акции</strong> — помощь пожилым людям, экологические субботники, благотворительные мероприятия.</li>
+          <li><strong>Научно-исследовательские проекты</strong> — краеведение, исторические мини-музеи, архивные исследования.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Галерея" id="gallery">
+      <div class="card">
+        <div class="kicker">Фотоархив</div>
+        <h2>Галерея</h2>
+        <div class="gallery" role="list">
+          <img src="Skuratovich_Yanina_Konstantinovna.jpg" alt="Я.К. Демидчик — портрет" loading="lazy" style="width:100%; border-radius:14px; box-shadow: var(--shadow); border:1px solid #c6cdd6; background:#fff">
+          <div class="ph" role="listitem">Фото 2</div>
+          <div class="ph" role="listitem">Фото 3</div>
+          <div class="ph" role="listitem">Фото 4</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Как использовать материал">
+      <div class="card third">
+        <div class="kicker">Текст</div>
+        <h2>Тут что-то можно добавить</h2>
+        <p>Здесь что-то написано</p>
+      </div>
+      <div class="card third">
+        <div class="kicker">Текст</div>
+        <h2>Тут что-то можно добавить</h2>
+        <p>Здесь что-то написано</p>
+      </div>
+      <div class="card third">
+        <div class="kicker">Текст</div>
+        <h2>Тут что-то можно добавить</h2>
+        <p>Здесь что-то написано</p>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Источники и благодарности">
+      <div class="card">
+        <div class="kicker">Примечание</div>
+        <h2>Источники и благодарности</h2>
+        <p class="muted">Материал подготовлен как учебно‑патриотический проект.</p>
+      </div>
+    </section>
+      <section class="grid" id="contacts" aria-label="Контакты">
+      <div class="card">
+        <div class="kicker">Контакты</div>
+        <h2>Связаться со школой</h2>
+        <p class="muted">Укажите точный адрес, телефон, e‑mail и ссылки на официальные страницы, когда данные будут подтверждены.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>© <span id="year"></span> Патриотический проект школьников. Сделано с уважением к труду учителя.</p>
+    <p class="sig">Сайт одностраничный на чистом HTML + CSS.</p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
