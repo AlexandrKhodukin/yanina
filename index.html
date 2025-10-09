@@ -255,6 +255,29 @@ header.hero-hero {
   pointer-events: none;
   filter: blur(1px);
 }
+    /* === IMAGE CARD FIX === */
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+.image-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-card img {
+  max-height: 450px; /* можно подправить под твой дизайн */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
   </style>
 </head>
 <body>
@@ -372,7 +395,7 @@ header.hero-hero {
       <div class="card third">
         <p>За успехи, достигнутые в увеличении производства и заготовке льна, Президиумом Верховного Совета СССР Янине Константиновне было присвоено звание Героя Социалистического Труда, вручен орден Ленина и золотая медаль «Серп и Молот». Ее дважды избирали депутатом областного и Верховного Совета БССР</p>
       </div>
-      <div class="card third">
+      <div class="card third image-card">
           <img src="Skuratovich_Yanina_Konstantinovna3.jpg" alt="Я.К. Демидчик — портрет" loading="eager">
       </div>
       <div class="card third">
